@@ -1,0 +1,9 @@
+set autoclose=yes nowarn=yes
+execute QueryMTX_SampleMerged_MTXs_phylo_seq7_REFSEQaddedAsRoot.nex
+outgroup REFSEQ
+lset nst=6 rates=invgamma
+mcmcp ngen=500000 samplefreq=500 printfreq=500 diagnfreq=5000
+mcmc nruns=4 nchains=4 savebrlens=yes temp=0.2 relburnin=yes burninfrac=0.25
+sump burnin=200
+sumt burnin=200
+quit

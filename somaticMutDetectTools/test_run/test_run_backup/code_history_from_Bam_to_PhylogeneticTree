@@ -1,0 +1,31 @@
+cat sample_prefix_list_PID0008 | xargs -i BsubS -n 2 -M 4 "Mu2Call1st_LROM_GPS_CC_Filter_without_gNomad.sh bamlist_on_tp53_PID0008 {}" Mu2Call_to_FMC >> JobID_Mu2CalltoFMC
+
+VCF_merge_from_1stMu2call.sh bamlist_on_tp53_PID0008 sample_prefix_list_PID0008
+
+2ndMu2Call_on_MergedVCF.sh bamlist_on_tp53_PID0008 sample_prefix_list_PID0008 hg19
+
+VCF_concat_merge_to_FilMTX.sh sample_prefix_list_PID0008 hg19 F
+
+FilTaggingToVCF.sh sample_prefix_list_PID0008 F
+
+cd TagVCF_withFilMTX
+ls *.vcf > FilTagged_VCFList
+BsubM -n 12 -M 48 "VarCounter.sh FilTagged_VCFList TagList" VarCount > JobID_VarCount
+
+cd 7FilTagged_VCF_Dir
+cd Phylo
+ls ../TagTrimmed_SNV_VCF/*vcf > TagTrimmed_SNV_VCFList
+cp ../../TagList ./.
+
+#This part may have to be modified.
+cat SampleNameList | xargs -i -d "\t" echo {} | cut -f 1-2 -d "-" | xargs -i printf {}"\t" > SampleNameList_Processed
+
+
+BsubM -n 20 -M 60 "VCFTagToPHYML.sh TagTrimmed_SNV_VCFList TagList" > JobID_VCFTagToPHYML
+
+
+cd PHYML/
+
+target_phy="QueryMTX_SampleMerged_MTXs_phylo_seq7_REFSEQaddedAsRoot.phy"
+
+phyml_submission.sh ${target_phy}

@@ -1,0 +1,1494 @@
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 1 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr1.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr1/MN82-1059.chr1.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr1/MN82-1059.chr1.unfiltered.vcf
+15:00:37.168 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:00:37 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:00:37.299 INFO  Mutect2 - ------------------------------------------------------------
+15:00:37.300 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:00:37.300 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:00:37.300 INFO  Mutect2 - Executing as huryu@cdragon304 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:00:37.300 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:00:37.300 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:00:37 PM CDT
+15:00:37.300 INFO  Mutect2 - ------------------------------------------------------------
+15:00:37.300 INFO  Mutect2 - ------------------------------------------------------------
+15:00:37.301 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:00:37.301 INFO  Mutect2 - Picard Version: 2.25.0
+15:00:37.301 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:00:37.301 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:00:37.301 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:00:37.301 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:00:37.301 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:00:37.301 INFO  Mutect2 - Deflater: IntelDeflater
+15:00:37.301 INFO  Mutect2 - Inflater: IntelInflater
+15:00:37.301 INFO  Mutect2 - GCS max retries/reopens: 20
+15:00:37.301 INFO  Mutect2 - Requester pays: disabled
+15:00:37.301 INFO  Mutect2 - Initializing engine
+15:00:37.486 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr1.vcf.gz
+15:00:37.556 INFO  IntervalArgumentCollection - Processing 249250621 bp from intervals
+15:00:37.561 INFO  Mutect2 - Done initializing engine
+15:00:37.586 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:00:37.587 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:00:37.623 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:00:37.624 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:00:37.624 INFO  IntelPairHmm - Available threads: 2
+15:00:37.624 INFO  IntelPairHmm - Requested threads: 4
+15:00:37.624 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:00:37.624 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:00:37.730 INFO  ProgressMeter - Starting traversal
+15:00:37.730 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 2 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr2.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr2/MN82-1059.chr2.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr2/MN82-1059.chr2.unfiltered.vcf
+15:00:40.835 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:00:40 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:00:40.975 INFO  Mutect2 - ------------------------------------------------------------
+15:00:40.975 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:00:40.975 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:00:40.975 INFO  Mutect2 - Executing as huryu@cdragon232 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:00:40.975 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:00:40.975 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:00:40 PM CDT
+15:00:40.976 INFO  Mutect2 - ------------------------------------------------------------
+15:00:40.976 INFO  Mutect2 - ------------------------------------------------------------
+15:00:40.976 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:00:40.976 INFO  Mutect2 - Picard Version: 2.25.0
+15:00:40.976 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:00:40.976 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:00:40.976 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:00:40.976 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:00:40.976 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:00:40.976 INFO  Mutect2 - Deflater: IntelDeflater
+15:00:40.976 INFO  Mutect2 - Inflater: IntelInflater
+15:00:40.976 INFO  Mutect2 - GCS max retries/reopens: 20
+15:00:40.976 INFO  Mutect2 - Requester pays: disabled
+15:00:40.977 INFO  Mutect2 - Initializing engine
+15:00:41.159 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr2.vcf.gz
+15:00:41.192 INFO  IntervalArgumentCollection - Processing 243199373 bp from intervals
+15:00:41.197 INFO  Mutect2 - Done initializing engine
+15:00:41.233 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:00:41.234 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:00:41.269 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:00:41.269 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:00:41.269 INFO  IntelPairHmm - Available threads: 2
+15:00:41.270 INFO  IntelPairHmm - Requested threads: 4
+15:00:41.270 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:00:41.270 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:00:41.367 INFO  ProgressMeter - Starting traversal
+15:00:41.367 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 3 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr3.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr3/MN82-1059.chr3.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr3/MN82-1059.chr3.unfiltered.vcf
+15:00:47.731 INFO  ProgressMeter -           1:46169701              0.2                153900         923400.0
+15:00:49.186 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:00:49 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:00:49.302 INFO  Mutect2 - ------------------------------------------------------------
+15:00:49.302 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:00:49.302 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:00:49.303 INFO  Mutect2 - Executing as huryu@cdragon388 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:00:49.303 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:00:49.303 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:00:49 PM CDT
+15:00:49.303 INFO  Mutect2 - ------------------------------------------------------------
+15:00:49.303 INFO  Mutect2 - ------------------------------------------------------------
+15:00:49.303 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:00:49.303 INFO  Mutect2 - Picard Version: 2.25.0
+15:00:49.303 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:00:49.303 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:00:49.303 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:00:49.303 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:00:49.303 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:00:49.303 INFO  Mutect2 - Deflater: IntelDeflater
+15:00:49.304 INFO  Mutect2 - Inflater: IntelInflater
+15:00:49.304 INFO  Mutect2 - GCS max retries/reopens: 20
+15:00:49.304 INFO  Mutect2 - Requester pays: disabled
+15:00:49.304 INFO  Mutect2 - Initializing engine
+15:00:49.453 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr3.vcf.gz
+15:00:49.481 INFO  IntervalArgumentCollection - Processing 198022430 bp from intervals
+15:00:49.486 INFO  Mutect2 - Done initializing engine
+15:00:49.503 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:00:49.508 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:00:49.543 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:00:49.543 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:00:49.544 INFO  IntelPairHmm - Available threads: 2
+15:00:49.544 INFO  IntelPairHmm - Requested threads: 4
+15:00:49.545 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:00:49.545 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:00:49.645 INFO  ProgressMeter - Starting traversal
+15:00:49.645 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:00:51.370 INFO  ProgressMeter -           2:50456701              0.2                168190        1009140.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 4 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr4.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr4/MN82-1059.chr4.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr4/MN82-1059.chr4.unfiltered.vcf
+15:00:55.481 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:00:55 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:00:55.609 INFO  Mutect2 - ------------------------------------------------------------
+15:00:55.609 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:00:55.609 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:00:55.609 INFO  Mutect2 - Executing as huryu@cdragon289 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:00:55.610 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:00:55.610 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:00:55 PM CDT
+15:00:55.610 INFO  Mutect2 - ------------------------------------------------------------
+15:00:55.610 INFO  Mutect2 - ------------------------------------------------------------
+15:00:55.610 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:00:55.610 INFO  Mutect2 - Picard Version: 2.25.0
+15:00:55.610 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:00:55.610 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:00:55.611 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:00:55.611 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:00:55.611 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:00:55.611 INFO  Mutect2 - Deflater: IntelDeflater
+15:00:55.611 INFO  Mutect2 - Inflater: IntelInflater
+15:00:55.611 INFO  Mutect2 - GCS max retries/reopens: 20
+15:00:55.611 INFO  Mutect2 - Requester pays: disabled
+15:00:55.611 INFO  Mutect2 - Initializing engine
+15:00:55.773 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr4.vcf.gz
+15:00:55.804 INFO  IntervalArgumentCollection - Processing 191154276 bp from intervals
+15:00:55.837 INFO  Mutect2 - Done initializing engine
+15:00:55.855 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:00:55.856 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:00:55.890 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:00:55.890 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:00:55.891 INFO  IntelPairHmm - Available threads: 2
+15:00:55.891 INFO  IntelPairHmm - Requested threads: 4
+15:00:55.891 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:00:55.891 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:00:55.967 INFO  ProgressMeter - Starting traversal
+15:00:55.967 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:00:57.730 INFO  ProgressMeter -           1:97679701              0.3                325600         976800.0
+15:00:59.646 INFO  ProgressMeter -           3:48320701              0.2                161070         966420.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 5 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr5.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr5/MN82-1059.chr5.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr5/MN82-1059.chr5.unfiltered.vcf
+15:01:01.367 INFO  ProgressMeter -          2:102884701              0.3                342950        1028850.0
+15:01:03.354 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:01:03 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:01:03.498 INFO  Mutect2 - ------------------------------------------------------------
+15:01:03.498 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:01:03.498 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:01:03.498 INFO  Mutect2 - Executing as huryu@cdragon280 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:01:03.498 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:01:03.498 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:01:03 PM CDT
+15:01:03.499 INFO  Mutect2 - ------------------------------------------------------------
+15:01:03.499 INFO  Mutect2 - ------------------------------------------------------------
+15:01:03.499 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:01:03.499 INFO  Mutect2 - Picard Version: 2.25.0
+15:01:03.499 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:01:03.499 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:01:03.499 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:01:03.499 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:01:03.499 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:01:03.499 INFO  Mutect2 - Deflater: IntelDeflater
+15:01:03.499 INFO  Mutect2 - Inflater: IntelInflater
+15:01:03.499 INFO  Mutect2 - GCS max retries/reopens: 20
+15:01:03.500 INFO  Mutect2 - Requester pays: disabled
+15:01:03.500 INFO  Mutect2 - Initializing engine
+15:01:03.712 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr5.vcf.gz
+15:01:03.777 INFO  IntervalArgumentCollection - Processing 180915260 bp from intervals
+15:01:03.782 INFO  Mutect2 - Done initializing engine
+15:01:03.809 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:01:03.813 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:01:03.847 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:01:03.847 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:01:03.848 INFO  IntelPairHmm - Available threads: 2
+15:01:03.848 INFO  IntelPairHmm - Requested threads: 4
+15:01:03.848 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:01:03.848 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:01:03.940 INFO  ProgressMeter - Starting traversal
+15:01:03.940 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:01:05.977 INFO  ProgressMeter -           4:44450701              0.2                148170         888309.4
+15:01:07.730 INFO  ProgressMeter -          1:149471701              0.5                498240         996480.0
+15:01:09.645 INFO  ProgressMeter -           3:99533701              0.3                331780         995340.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 6 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr6.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr6/MN82-1059.chr6.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr6/MN82-1059.chr6.unfiltered.vcf
+15:01:11.367 INFO  ProgressMeter -          2:155582701              0.5                518610        1037220.0
+15:01:13.096 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:01:13 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:01:13.236 INFO  Mutect2 - ------------------------------------------------------------
+15:01:13.236 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:01:13.236 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:01:13.237 INFO  Mutect2 - Executing as huryu@cdragon263 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:01:13.237 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:01:13.237 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:01:13 PM CDT
+15:01:13.237 INFO  Mutect2 - ------------------------------------------------------------
+15:01:13.237 INFO  Mutect2 - ------------------------------------------------------------
+15:01:13.237 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:01:13.237 INFO  Mutect2 - Picard Version: 2.25.0
+15:01:13.237 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:01:13.237 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:01:13.237 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:01:13.237 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:01:13.237 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:01:13.238 INFO  Mutect2 - Deflater: IntelDeflater
+15:01:13.238 INFO  Mutect2 - Inflater: IntelInflater
+15:01:13.238 INFO  Mutect2 - GCS max retries/reopens: 20
+15:01:13.241 INFO  Mutect2 - Requester pays: disabled
+15:01:13.241 INFO  Mutect2 - Initializing engine
+15:01:13.445 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr6.vcf.gz
+15:01:13.506 INFO  IntervalArgumentCollection - Processing 171115067 bp from intervals
+15:01:13.511 INFO  Mutect2 - Done initializing engine
+15:01:13.528 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:01:13.530 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:01:13.564 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:01:13.564 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:01:13.565 INFO  IntelPairHmm - Available threads: 2
+15:01:13.565 INFO  IntelPairHmm - Requested threads: 4
+15:01:13.565 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:01:13.565 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:01:13.648 INFO  ProgressMeter - Starting traversal
+15:01:13.648 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:01:13.941 INFO  ProgressMeter -           5:44342701              0.2                147810         886860.0
+15:01:15.976 INFO  ProgressMeter -           4:91724701              0.3                305750         916883.2
+15:01:17.730 INFO  ProgressMeter -          1:201515701              0.7                671720        1007580.0
+15:01:19.645 INFO  ProgressMeter -          3:151001701              0.5                503340        1006680.0
+15:01:21.367 INFO  ProgressMeter -          2:208094701              0.7                693650        1040475.0
+15:01:23.651 INFO  ProgressMeter -           6:44903701              0.2                149680         898080.0
+15:01:23.940 INFO  ProgressMeter -           5:93464701              0.3                311550         934650.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 7 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr7.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr7/MN82-1059.chr7.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr7/MN82-1059.chr7.unfiltered.vcf
+15:01:25.976 INFO  ProgressMeter -          4:139004701              0.5                463350         926452.9
+15:01:26.739 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+15:01:26.759 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:01:26.777 INFO  ProgressMeter -          1:249248701              0.8                830836        1016396.0
+15:01:26.777 INFO  ProgressMeter - Traversal complete. Processed 830836 total regions in 0.8 minutes.
+Mar 19, 2024 3:01:26 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:01:26.860 INFO  Mutect2 - ------------------------------------------------------------
+15:01:26.861 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:01:26.861 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:01:26.861 INFO  Mutect2 - Executing as huryu@cdragon266 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:01:26.861 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:01:26.861 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:01:26 PM CDT
+15:01:26.861 INFO  Mutect2 - ------------------------------------------------------------
+15:01:26.861 INFO  Mutect2 - ------------------------------------------------------------
+15:01:26.861 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:01:26.861 INFO  Mutect2 - Picard Version: 2.25.0
+15:01:26.861 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:01:26.862 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:01:26.862 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:01:26.862 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:01:26.862 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:01:26.862 INFO  Mutect2 - Deflater: IntelDeflater
+15:01:26.862 INFO  Mutect2 - Inflater: IntelInflater
+15:01:26.862 INFO  Mutect2 - GCS max retries/reopens: 20
+15:01:26.862 INFO  Mutect2 - Requester pays: disabled
+15:01:26.862 INFO  Mutect2 - Initializing engine
+15:01:26.890 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:01:26.893 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:01:26.894 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:01:26.894 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:01:26 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.83 minutes.
+Runtime.totalMemory()=2646605824
+15:01:27.030 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr7.vcf.gz
+15:01:27.090 INFO  IntervalArgumentCollection - Processing 159138663 bp from intervals
+15:01:27.097 INFO  Mutect2 - Done initializing engine
+15:01:27.126 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:01:27.130 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:01:27.164 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:01:27.164 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:01:27.164 INFO  IntelPairHmm - Available threads: 2
+15:01:27.164 INFO  IntelPairHmm - Requested threads: 4
+15:01:27.164 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:01:27.164 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:01:27.258 INFO  ProgressMeter - Starting traversal
+15:01:27.264 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:01:28.052 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:01:28.055 INFO  ProgressMeter -          2:243197701              0.8                810665        1041807.3
+15:01:28.055 INFO  ProgressMeter - Traversal complete. Processed 810665 total regions in 0.8 minutes.
+15:01:28.189 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:01:28.190 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:01:28.190 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:01:28.190 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:01:28 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.79 minutes.
+Runtime.totalMemory()=4236247040
+15:01:28.784 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:01:28.788 INFO  ProgressMeter -          3:198020701              0.7                660075        1011790.1
+15:01:28.788 INFO  ProgressMeter - Traversal complete. Processed 660075 total regions in 0.7 minutes.
+15:01:28.905 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:01:28.905 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:01:28.905 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:01:28.906 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:01:28 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.66 minutes.
+Runtime.totalMemory()=2579496960
+15:01:33.649 INFO  ProgressMeter -           6:94334701              0.3                314450         943350.0
+15:01:33.940 INFO  ProgressMeter -          5:142691701              0.5                475640         951280.0
+15:01:35.976 INFO  ProgressMeter -          4:186080701              0.7                620270         930219.0
+15:01:37.054 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:01:37.054 INFO  ProgressMeter -          4:191153701              0.7                637181         930508.2
+15:01:37.055 INFO  ProgressMeter - Traversal complete. Processed 637181 total regions in 0.7 minutes.
+15:01:37.169 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:01:37.169 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:01:37.169 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:01:37.170 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:01:37 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.70 minutes.
+Runtime.totalMemory()=4290772992
+15:01:37.265 INFO  ProgressMeter -           7:44087701              0.2                146960         881760.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 8 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr8.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr8/MN82-1059.chr8.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr8/MN82-1059.chr8.unfiltered.vcf
+15:01:39.371 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:01:39 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:01:39.476 INFO  Mutect2 - ------------------------------------------------------------
+15:01:39.477 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:01:39.477 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:01:39.477 INFO  Mutect2 - Executing as huryu@cdragon379 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:01:39.477 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:01:39.477 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:01:39 PM CDT
+15:01:39.477 INFO  Mutect2 - ------------------------------------------------------------
+15:01:39.477 INFO  Mutect2 - ------------------------------------------------------------
+15:01:39.477 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:01:39.477 INFO  Mutect2 - Picard Version: 2.25.0
+15:01:39.477 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:01:39.477 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:01:39.478 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:01:39.478 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:01:39.478 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:01:39.478 INFO  Mutect2 - Deflater: IntelDeflater
+15:01:39.478 INFO  Mutect2 - Inflater: IntelInflater
+15:01:39.478 INFO  Mutect2 - GCS max retries/reopens: 20
+15:01:39.478 INFO  Mutect2 - Requester pays: disabled
+15:01:39.478 INFO  Mutect2 - Initializing engine
+15:01:39.698 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr8.vcf.gz
+15:01:39.750 INFO  IntervalArgumentCollection - Processing 146364022 bp from intervals
+15:01:39.755 INFO  Mutect2 - Done initializing engine
+15:01:39.773 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:01:39.774 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:01:39.805 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:01:39.805 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:01:39.805 INFO  IntelPairHmm - Available threads: 2
+15:01:39.805 INFO  IntelPairHmm - Requested threads: 4
+15:01:39.805 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:01:39.806 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:01:39.882 INFO  ProgressMeter - Starting traversal
+15:01:39.882 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:01:41.680 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:01:41.684 INFO  ProgressMeter -          5:180914701              0.6                603051         958644.0
+15:01:41.685 INFO  ProgressMeter - Traversal complete. Processed 603051 total regions in 0.6 minutes.
+15:01:41.793 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:01:41.794 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:01:41.794 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:01:41.794 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:01:41 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.64 minutes.
+Runtime.totalMemory()=3166699520
+15:01:43.649 INFO  ProgressMeter -          6:143777701              0.5                479260         958520.0
+15:01:47.264 INFO  ProgressMeter -           7:94943701              0.3                316480         949440.0
+15:01:49.165 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:01:49.169 INFO  ProgressMeter -          6:171113701              0.6                570384         963486.5
+15:01:49.169 INFO  ProgressMeter - Traversal complete. Processed 570384 total regions in 0.6 minutes.
+15:01:49.284 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:01:49.284 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:01:49.284 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:01:49.284 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:01:49 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.60 minutes.
+Runtime.totalMemory()=3191865344
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 9 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr9.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr9/MN82-1059.chr9.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr9/MN82-1059.chr9.unfiltered.vcf
+15:01:49.882 INFO  ProgressMeter -           8:36161701              0.2                120540         723240.0
+15:01:51.713 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:01:51 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:01:51.842 INFO  Mutect2 - ------------------------------------------------------------
+15:01:51.843 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:01:51.843 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:01:51.843 INFO  Mutect2 - Executing as huryu@cdragon216 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:01:51.843 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:01:51.843 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:01:51 PM CDT
+15:01:51.843 INFO  Mutect2 - ------------------------------------------------------------
+15:01:51.843 INFO  Mutect2 - ------------------------------------------------------------
+15:01:51.844 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:01:51.844 INFO  Mutect2 - Picard Version: 2.25.0
+15:01:51.844 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:01:51.844 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:01:51.844 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:01:51.844 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:01:51.844 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:01:51.844 INFO  Mutect2 - Deflater: IntelDeflater
+15:01:51.844 INFO  Mutect2 - Inflater: IntelInflater
+15:01:51.844 INFO  Mutect2 - GCS max retries/reopens: 20
+15:01:51.844 INFO  Mutect2 - Requester pays: disabled
+15:01:51.844 INFO  Mutect2 - Initializing engine
+15:01:52.013 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr9.vcf.gz
+15:01:52.055 INFO  IntervalArgumentCollection - Processing 141213431 bp from intervals
+15:01:52.060 INFO  Mutect2 - Done initializing engine
+15:01:52.077 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:01:52.078 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:01:52.112 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:01:52.112 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:01:52.113 INFO  IntelPairHmm - Available threads: 2
+15:01:52.113 INFO  IntelPairHmm - Requested threads: 4
+15:01:52.113 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:01:52.113 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:01:52.198 INFO  ProgressMeter - Starting traversal
+15:01:52.198 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 10 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr10.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr10/MN82-1059.chr10.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr10/MN82-1059.chr10.unfiltered.vcf
+15:01:57.264 INFO  ProgressMeter -          7:146585701              0.5                488620         977240.0
+15:01:59.136 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:01:59 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:01:59.270 INFO  Mutect2 - ------------------------------------------------------------
+15:01:59.270 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:01:59.270 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:01:59.270 INFO  Mutect2 - Executing as huryu@cdragon256 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:01:59.270 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:01:59.270 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:01:59 PM CDT
+15:01:59.270 INFO  Mutect2 - ------------------------------------------------------------
+15:01:59.270 INFO  Mutect2 - ------------------------------------------------------------
+15:01:59.271 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:01:59.271 INFO  Mutect2 - Picard Version: 2.25.0
+15:01:59.271 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:01:59.271 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:01:59.271 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:01:59.271 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:01:59.271 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:01:59.271 INFO  Mutect2 - Deflater: IntelDeflater
+15:01:59.271 INFO  Mutect2 - Inflater: IntelInflater
+15:01:59.271 INFO  Mutect2 - GCS max retries/reopens: 20
+15:01:59.271 INFO  Mutect2 - Requester pays: disabled
+15:01:59.271 INFO  Mutect2 - Initializing engine
+15:01:59.425 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr10.vcf.gz
+15:01:59.462 INFO  IntervalArgumentCollection - Processing 135534747 bp from intervals
+15:01:59.467 INFO  Mutect2 - Done initializing engine
+15:01:59.492 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:01:59.493 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:01:59.534 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:01:59.534 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:01:59.534 INFO  IntelPairHmm - Available threads: 2
+15:01:59.535 INFO  IntelPairHmm - Requested threads: 4
+15:01:59.535 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:01:59.535 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:01:59.636 INFO  ProgressMeter - Starting traversal
+15:01:59.637 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:01:59.653 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:01:59.656 INFO  ProgressMeter -          7:159137701              0.5                530463         982581.5
+15:01:59.656 INFO  ProgressMeter - Traversal complete. Processed 530463 total regions in 0.5 minutes.
+15:01:59.761 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:01:59.761 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:01:59.761 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:01:59.761 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:01:59 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.55 minutes.
+Runtime.totalMemory()=3930062848
+15:01:59.882 INFO  ProgressMeter -           8:86165701              0.3                287220         861660.0
+15:02:02.199 INFO  ProgressMeter -           9:43721701              0.2                145740         874440.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 11 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr11.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr11/MN82-1059.chr11.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr11/MN82-1059.chr11.unfiltered.vcf
+15:02:09.638 INFO  ProgressMeter -          10:39731701              0.2                132440         794640.0
+15:02:09.883 INFO  ProgressMeter -          8:137357701              0.5                457860         915720.0
+15:02:11.099 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:02:11 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:02:11.235 INFO  Mutect2 - ------------------------------------------------------------
+15:02:11.235 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:02:11.235 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:02:11.236 INFO  Mutect2 - Executing as huryu@cdragon398 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:02:11.236 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:02:11.236 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:02:11 PM CDT
+15:02:11.236 INFO  Mutect2 - ------------------------------------------------------------
+15:02:11.236 INFO  Mutect2 - ------------------------------------------------------------
+15:02:11.236 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:02:11.236 INFO  Mutect2 - Picard Version: 2.25.0
+15:02:11.236 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:02:11.236 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:02:11.236 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:02:11.237 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:02:11.237 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:02:11.237 INFO  Mutect2 - Deflater: IntelDeflater
+15:02:11.237 INFO  Mutect2 - Inflater: IntelInflater
+15:02:11.237 INFO  Mutect2 - GCS max retries/reopens: 20
+15:02:11.237 INFO  Mutect2 - Requester pays: disabled
+15:02:11.237 INFO  Mutect2 - Initializing engine
+15:02:11.453 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr11.vcf.gz
+15:02:11.487 INFO  IntervalArgumentCollection - Processing 135006516 bp from intervals
+15:02:11.492 INFO  Mutect2 - Done initializing engine
+15:02:11.520 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:02:11.521 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:02:11.557 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:02:11.558 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:02:11.558 INFO  IntelPairHmm - Available threads: 2
+15:02:11.558 INFO  IntelPairHmm - Requested threads: 4
+15:02:11.558 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:02:11.558 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:02:11.652 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:02:11.656 INFO  ProgressMeter -          8:146363701              0.5                487881         921283.4
+15:02:11.656 INFO  ProgressMeter - Traversal complete. Processed 487881 total regions in 0.5 minutes.
+15:02:11.685 INFO  ProgressMeter - Starting traversal
+15:02:11.688 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:02:11.785 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:02:11.788 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:02:11.789 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:02:11.789 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:02:11 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.54 minutes.
+Runtime.totalMemory()=9110028288
+15:02:12.198 INFO  ProgressMeter -           9:91163701              0.3                303880         911640.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 12 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr12.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr12/MN82-1059.chr12.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr12/MN82-1059.chr12.unfiltered.vcf
+15:02:19.637 INFO  ProgressMeter -          10:87596701              0.3                291990         875970.0
+15:02:21.014 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:02:21 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:02:21.180 INFO  Mutect2 - ------------------------------------------------------------
+15:02:21.180 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:02:21.180 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:02:21.180 INFO  Mutect2 - Executing as huryu@cdragon276 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:02:21.180 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:02:21.181 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:02:20 PM CDT
+15:02:21.181 INFO  Mutect2 - ------------------------------------------------------------
+15:02:21.181 INFO  Mutect2 - ------------------------------------------------------------
+15:02:21.181 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:02:21.181 INFO  Mutect2 - Picard Version: 2.25.0
+15:02:21.181 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:02:21.181 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:02:21.181 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:02:21.181 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:02:21.181 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:02:21.181 INFO  Mutect2 - Deflater: IntelDeflater
+15:02:21.182 INFO  Mutect2 - Inflater: IntelInflater
+15:02:21.182 INFO  Mutect2 - GCS max retries/reopens: 20
+15:02:21.182 INFO  Mutect2 - Requester pays: disabled
+15:02:21.182 INFO  Mutect2 - Initializing engine
+15:02:21.343 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr12.vcf.gz
+15:02:21.371 INFO  IntervalArgumentCollection - Processing 133851895 bp from intervals
+15:02:21.381 INFO  Mutect2 - Done initializing engine
+15:02:21.401 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:02:21.403 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:02:21.436 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:02:21.436 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:02:21.437 INFO  IntelPairHmm - Available threads: 2
+15:02:21.437 INFO  IntelPairHmm - Requested threads: 4
+15:02:21.437 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:02:21.437 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:02:21.528 INFO  ProgressMeter - Starting traversal
+15:02:21.528 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:02:21.689 INFO  ProgressMeter -          11:33497701              0.2                111660         669960.0
+15:02:22.198 INFO  ProgressMeter -          9:139454701              0.5                464850         929700.0
+15:02:22.564 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:02:22.564 INFO  ProgressMeter -          9:141212701              0.5                470712         930077.1
+15:02:22.565 INFO  ProgressMeter - Traversal complete. Processed 470712 total regions in 0.5 minutes.
+15:02:22.678 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:02:22.678 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:02:22.678 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:02:22.678 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:02:22 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.52 minutes.
+Runtime.totalMemory()=2579496960
+15:02:29.637 INFO  ProgressMeter -         10:134915701              0.5                449720         899440.0
+15:02:29.770 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:02:29.770 INFO  ProgressMeter -         10:135533701              0.5                451783         899577.9
+15:02:29.770 INFO  ProgressMeter - Traversal complete. Processed 451783 total regions in 0.5 minutes.
+15:02:29.884 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:02:29.884 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:02:29.884 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:02:29.884 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:02:29 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.51 minutes.
+Runtime.totalMemory()=10892607488
+15:02:31.530 INFO  ProgressMeter -          12:48974701              0.2                163250         979500.0
+15:02:31.688 INFO  ProgressMeter -          11:79391701              0.3                264640         793920.0
+15:02:41.528 INFO  ProgressMeter -         12:100709701              0.3                335700        1007100.0
+15:02:41.688 INFO  ProgressMeter -         11:125606701              0.5                418690         837380.0
+15:02:43.716 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:02:43.717 INFO  ProgressMeter -         11:135005701              0.5                450022         843027.3
+15:02:43.717 INFO  ProgressMeter - Traversal complete. Processed 450022 total regions in 0.5 minutes.
+15:02:43.824 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:02:43.824 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:02:43.824 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:02:43.825 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:02:43 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.55 minutes.
+Runtime.totalMemory()=7960788992
+15:02:47.909 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:02:47.912 INFO  ProgressMeter -         12:133850701              0.4                446173        1014644.5
+15:02:47.913 INFO  ProgressMeter - Traversal complete. Processed 446173 total regions in 0.4 minutes.
+15:02:48.036 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:02:48.036 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:02:48.036 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:02:48.037 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:02:48 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.45 minutes.
+Runtime.totalMemory()=2680160256
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 13 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr13.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr13/MN82-1059.chr13.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr13/MN82-1059.chr13.unfiltered.vcf
+15:03:00.924 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:03:01 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:03:01.060 INFO  Mutect2 - ------------------------------------------------------------
+15:03:01.060 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:03:01.060 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:03:01.061 INFO  Mutect2 - Executing as huryu@cdragon253 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:03:01.061 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:03:01.061 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:03:00 PM CDT
+15:03:01.061 INFO  Mutect2 - ------------------------------------------------------------
+15:03:01.061 INFO  Mutect2 - ------------------------------------------------------------
+15:03:01.061 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:03:01.061 INFO  Mutect2 - Picard Version: 2.25.0
+15:03:01.061 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:03:01.061 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:03:01.061 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:03:01.062 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:03:01.062 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:03:01.062 INFO  Mutect2 - Deflater: IntelDeflater
+15:03:01.062 INFO  Mutect2 - Inflater: IntelInflater
+15:03:01.062 INFO  Mutect2 - GCS max retries/reopens: 20
+15:03:01.062 INFO  Mutect2 - Requester pays: disabled
+15:03:01.062 INFO  Mutect2 - Initializing engine
+15:03:01.260 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr13.vcf.gz
+15:03:01.304 INFO  IntervalArgumentCollection - Processing 115169878 bp from intervals
+15:03:01.310 INFO  Mutect2 - Done initializing engine
+15:03:01.333 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:03:01.334 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:03:01.368 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:03:01.368 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:03:01.369 INFO  IntelPairHmm - Available threads: 2
+15:03:01.369 INFO  IntelPairHmm - Requested threads: 4
+15:03:01.369 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:03:01.369 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:03:01.467 INFO  ProgressMeter - Starting traversal
+15:03:01.467 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 14 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr14.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr14/MN82-1059.chr14.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr14/MN82-1059.chr14.unfiltered.vcf
+15:03:08.549 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:03:08 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:03:08.684 INFO  Mutect2 - ------------------------------------------------------------
+15:03:08.684 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:03:08.684 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:03:08.684 INFO  Mutect2 - Executing as huryu@cdragon289 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:03:08.684 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:03:08.684 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:03:08 PM CDT
+15:03:08.684 INFO  Mutect2 - ------------------------------------------------------------
+15:03:08.684 INFO  Mutect2 - ------------------------------------------------------------
+15:03:08.685 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:03:08.685 INFO  Mutect2 - Picard Version: 2.25.0
+15:03:08.685 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:03:08.685 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:03:08.685 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:03:08.685 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:03:08.685 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:03:08.685 INFO  Mutect2 - Deflater: IntelDeflater
+15:03:08.685 INFO  Mutect2 - Inflater: IntelInflater
+15:03:08.685 INFO  Mutect2 - GCS max retries/reopens: 20
+15:03:08.685 INFO  Mutect2 - Requester pays: disabled
+15:03:08.686 INFO  Mutect2 - Initializing engine
+15:03:08.909 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr14.vcf.gz
+15:03:08.962 INFO  IntervalArgumentCollection - Processing 107349540 bp from intervals
+15:03:08.967 INFO  Mutect2 - Done initializing engine
+15:03:08.990 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:03:08.995 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:03:09.031 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:03:09.031 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:03:09.031 INFO  IntelPairHmm - Available threads: 2
+15:03:09.032 INFO  IntelPairHmm - Requested threads: 4
+15:03:09.032 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:03:09.032 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:03:09.127 INFO  ProgressMeter - Starting traversal
+15:03:09.127 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:03:11.468 INFO  ProgressMeter -          13:49145701              0.2                163820         982920.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 15 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr15.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr15/MN82-1059.chr15.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr15/MN82-1059.chr15.unfiltered.vcf
+15:03:13.927 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:03:14 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:03:14.049 INFO  Mutect2 - ------------------------------------------------------------
+15:03:14.049 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:03:14.050 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:03:14.050 INFO  Mutect2 - Executing as huryu@cdragon280 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:03:14.050 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:03:14.050 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:03:13 PM CDT
+15:03:14.050 INFO  Mutect2 - ------------------------------------------------------------
+15:03:14.050 INFO  Mutect2 - ------------------------------------------------------------
+15:03:14.050 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:03:14.050 INFO  Mutect2 - Picard Version: 2.25.0
+15:03:14.050 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:03:14.051 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:03:14.051 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:03:14.051 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:03:14.051 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:03:14.051 INFO  Mutect2 - Deflater: IntelDeflater
+15:03:14.051 INFO  Mutect2 - Inflater: IntelInflater
+15:03:14.051 INFO  Mutect2 - GCS max retries/reopens: 20
+15:03:14.051 INFO  Mutect2 - Requester pays: disabled
+15:03:14.051 INFO  Mutect2 - Initializing engine
+15:03:14.215 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr15.vcf.gz
+15:03:14.236 INFO  IntervalArgumentCollection - Processing 102531392 bp from intervals
+15:03:14.242 INFO  Mutect2 - Done initializing engine
+15:03:14.260 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:03:14.262 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:03:14.295 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:03:14.295 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:03:14.296 INFO  IntelPairHmm - Available threads: 2
+15:03:14.296 INFO  IntelPairHmm - Requested threads: 4
+15:03:14.296 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:03:14.296 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:03:14.412 INFO  ProgressMeter - Starting traversal
+15:03:14.413 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:03:19.128 INFO  ProgressMeter -          14:48305701              0.2                161020         966120.0
+15:03:21.468 INFO  ProgressMeter -         13:101102701              0.3                337010        1011030.0
+15:03:24.147 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:03:24.147 INFO  ProgressMeter -         13:115169701              0.4                383900        1015608.5
+15:03:24.147 INFO  ProgressMeter - Traversal complete. Processed 383900 total regions in 0.4 minutes.
+15:03:24.258 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:03:24.258 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:03:24.259 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:03:24.259 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:03:24 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.39 minutes.
+Runtime.totalMemory()=2579496960
+15:03:24.415 INFO  ProgressMeter -          15:48632701              0.2                162110         972660.0
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 16 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr16.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr16/MN82-1059.chr16.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr16/MN82-1059.chr16.unfiltered.vcf
+15:03:26.893 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:03:27 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:03:27.023 INFO  Mutect2 - ------------------------------------------------------------
+15:03:27.023 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:03:27.023 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:03:27.023 INFO  Mutect2 - Executing as huryu@cdragon293 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:03:27.023 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:03:27.023 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:03:26 PM CDT
+15:03:27.023 INFO  Mutect2 - ------------------------------------------------------------
+15:03:27.023 INFO  Mutect2 - ------------------------------------------------------------
+15:03:27.024 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:03:27.024 INFO  Mutect2 - Picard Version: 2.25.0
+15:03:27.024 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:03:27.024 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:03:27.024 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:03:27.024 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:03:27.024 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:03:27.024 INFO  Mutect2 - Deflater: IntelDeflater
+15:03:27.024 INFO  Mutect2 - Inflater: IntelInflater
+15:03:27.024 INFO  Mutect2 - GCS max retries/reopens: 20
+15:03:27.024 INFO  Mutect2 - Requester pays: disabled
+15:03:27.024 INFO  Mutect2 - Initializing engine
+15:03:27.229 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr16.vcf.gz
+15:03:27.307 INFO  IntervalArgumentCollection - Processing 90354753 bp from intervals
+15:03:27.313 INFO  Mutect2 - Done initializing engine
+15:03:27.338 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:03:27.340 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:03:27.375 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:03:27.375 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:03:27.375 INFO  IntelPairHmm - Available threads: 2
+15:03:27.375 INFO  IntelPairHmm - Requested threads: 4
+15:03:27.375 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:03:27.375 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:03:27.466 INFO  ProgressMeter - Starting traversal
+15:03:27.467 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:03:29.127 INFO  ProgressMeter -          14:99821701              0.3                332740         998220.0
+15:03:30.599 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:03:30.600 INFO  ProgressMeter -         14:107348701              0.4                357832         999856.6
+15:03:30.600 INFO  ProgressMeter - Traversal complete. Processed 357832 total regions in 0.4 minutes.
+15:03:30.736 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:03:30.737 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:03:30.737 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:03:30.737 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:03:30 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.37 minutes.
+Runtime.totalMemory()=2579496960
+15:03:34.413 INFO  ProgressMeter -         15:100277701              0.3                334260        1002780.0
+15:03:34.856 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:03:34.856 INFO  ProgressMeter -         15:102530701              0.3                341772        1003097.4
+15:03:34.856 INFO  ProgressMeter - Traversal complete. Processed 341772 total regions in 0.3 minutes.
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 17 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr17.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr17/MN82-1059.chr17.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr17/MN82-1059.chr17.unfiltered.vcf
+15:03:34.972 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:03:34.975 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:03:34.975 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:03:34.976 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:03:34 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.35 minutes.
+Runtime.totalMemory()=4404019200
+15:03:36.848 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:03:36 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:03:36.987 INFO  Mutect2 - ------------------------------------------------------------
+15:03:36.988 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:03:36.988 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:03:36.988 INFO  Mutect2 - Executing as huryu@cdragon242 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:03:36.988 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:03:37.001 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:03:36 PM CDT
+15:03:37.002 INFO  Mutect2 - ------------------------------------------------------------
+15:03:37.002 INFO  Mutect2 - ------------------------------------------------------------
+15:03:37.002 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:03:37.002 INFO  Mutect2 - Picard Version: 2.25.0
+15:03:37.002 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:03:37.002 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:03:37.002 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:03:37.002 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:03:37.002 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:03:37.003 INFO  Mutect2 - Deflater: IntelDeflater
+15:03:37.003 INFO  Mutect2 - Inflater: IntelInflater
+15:03:37.003 INFO  Mutect2 - GCS max retries/reopens: 20
+15:03:37.003 INFO  Mutect2 - Requester pays: disabled
+15:03:37.003 INFO  Mutect2 - Initializing engine
+15:03:37.223 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr17.vcf.gz
+15:03:37.254 INFO  IntervalArgumentCollection - Processing 81195210 bp from intervals
+15:03:37.260 INFO  Mutect2 - Done initializing engine
+15:03:37.289 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:03:37.293 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:03:37.327 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:03:37.327 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:03:37.327 INFO  IntelPairHmm - Available threads: 2
+15:03:37.327 INFO  IntelPairHmm - Requested threads: 4
+15:03:37.327 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:03:37.327 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:03:37.436 INFO  ProgressMeter - Starting traversal
+15:03:37.437 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:03:37.468 INFO  ProgressMeter -          16:48956701              0.2                163190         979140.0
+15:03:45.384 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:03:45.385 INFO  ProgressMeter -          16:90353701              0.3                301183        1008537.8
+15:03:45.385 INFO  ProgressMeter - Traversal complete. Processed 301183 total regions in 0.3 minutes.
+15:03:45.490 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:03:45.491 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:03:45.491 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:03:45.491 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:03:45 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.31 minutes.
+Runtime.totalMemory()=2596274176
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 18 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr18.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr18/MN82-1059.chr18.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr18/MN82-1059.chr18.unfiltered.vcf
+15:03:47.437 INFO  ProgressMeter -          17:28555984              0.2                 95210         571260.0
+15:03:48.171 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:03:48 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:03:48.313 INFO  Mutect2 - ------------------------------------------------------------
+15:03:48.313 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:03:48.313 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:03:48.313 INFO  Mutect2 - Executing as huryu@cdragon293 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:03:48.313 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:03:48.313 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:03:48 PM CDT
+15:03:48.313 INFO  Mutect2 - ------------------------------------------------------------
+15:03:48.314 INFO  Mutect2 - ------------------------------------------------------------
+15:03:48.314 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:03:48.314 INFO  Mutect2 - Picard Version: 2.25.0
+15:03:48.314 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:03:48.314 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:03:48.314 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:03:48.314 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:03:48.314 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:03:48.314 INFO  Mutect2 - Deflater: IntelDeflater
+15:03:48.314 INFO  Mutect2 - Inflater: IntelInflater
+15:03:48.314 INFO  Mutect2 - GCS max retries/reopens: 20
+15:03:48.314 INFO  Mutect2 - Requester pays: disabled
+15:03:48.314 INFO  Mutect2 - Initializing engine
+15:03:48.537 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr18.vcf.gz
+15:03:48.573 INFO  IntervalArgumentCollection - Processing 78077248 bp from intervals
+15:03:48.578 INFO  Mutect2 - Done initializing engine
+15:03:48.601 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:03:48.602 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:03:48.638 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:03:48.638 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:03:48.639 INFO  IntelPairHmm - Available threads: 2
+15:03:48.639 INFO  IntelPairHmm - Requested threads: 4
+15:03:48.639 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:03:48.639 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:03:48.750 INFO  ProgressMeter - Starting traversal
+15:03:48.750 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 19 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr19.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr19/MN82-1059.chr19.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr19/MN82-1059.chr19.unfiltered.vcf
+15:03:55.018 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:03:55 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:03:55.153 INFO  Mutect2 - ------------------------------------------------------------
+15:03:55.153 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:03:55.153 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:03:55.153 INFO  Mutect2 - Executing as huryu@cdragon386 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:03:55.153 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:03:55.153 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:03:54 PM CDT
+15:03:55.153 INFO  Mutect2 - ------------------------------------------------------------
+15:03:55.153 INFO  Mutect2 - ------------------------------------------------------------
+15:03:55.154 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:03:55.154 INFO  Mutect2 - Picard Version: 2.25.0
+15:03:55.154 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:03:55.154 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:03:55.154 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:03:55.154 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:03:55.154 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:03:55.154 INFO  Mutect2 - Deflater: IntelDeflater
+15:03:55.154 INFO  Mutect2 - Inflater: IntelInflater
+15:03:55.154 INFO  Mutect2 - GCS max retries/reopens: 20
+15:03:55.154 INFO  Mutect2 - Requester pays: disabled
+15:03:55.155 INFO  Mutect2 - Initializing engine
+15:03:55.363 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr19.vcf.gz
+15:03:55.400 INFO  IntervalArgumentCollection - Processing 59128983 bp from intervals
+15:03:55.405 INFO  Mutect2 - Done initializing engine
+15:03:55.429 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:03:55.430 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:03:55.467 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:03:55.467 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:03:55.467 INFO  IntelPairHmm - Available threads: 2
+15:03:55.468 INFO  IntelPairHmm - Requested threads: 4
+15:03:55.468 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:03:55.468 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:03:55.573 INFO  ProgressMeter - Starting traversal
+15:03:55.574 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:03:57.437 INFO  ProgressMeter -          17:72544984              0.3                241840         725520.0
+15:03:58.751 INFO  ProgressMeter -          18:48680701              0.2                162270         973620.0
+15:03:59.411 INFO  Mutect2 - 38 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+38 total reads filtered
+15:03:59.415 INFO  ProgressMeter -          17:81193984              0.4                270674         738974.4
+15:03:59.415 INFO  ProgressMeter - Traversal complete. Processed 270674 total regions in 0.4 minutes.
+15:03:59.528 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.002925276
+15:03:59.528 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.249018428
+15:03:59.528 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.14 sec
+15:03:59.529 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:03:59 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.38 minutes.
+Runtime.totalMemory()=7503609856
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 20 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr20.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr20/MN82-1059.chr20.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr20/MN82-1059.chr20.unfiltered.vcf
+15:04:04.400 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:04:04.404 INFO  ProgressMeter -          18:78074701              0.3                260258         997603.0
+15:04:04.404 INFO  ProgressMeter - Traversal complete. Processed 260258 total regions in 0.3 minutes.
+15:04:04.522 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:04:04.522 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:04:04.522 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:04:04.523 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:04:04 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.27 minutes.
+Runtime.totalMemory()=5481955328
+15:04:05.193 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:04:05 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:04:05.317 INFO  Mutect2 - ------------------------------------------------------------
+15:04:05.318 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:04:05.318 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:04:05.318 INFO  Mutect2 - Executing as huryu@cdragon256 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:04:05.318 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:04:05.318 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:04:05 PM CDT
+15:04:05.318 INFO  Mutect2 - ------------------------------------------------------------
+15:04:05.318 INFO  Mutect2 - ------------------------------------------------------------
+15:04:05.319 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:04:05.319 INFO  Mutect2 - Picard Version: 2.25.0
+15:04:05.319 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:04:05.319 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:04:05.319 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:04:05.319 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:04:05.319 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:04:05.319 INFO  Mutect2 - Deflater: IntelDeflater
+15:04:05.319 INFO  Mutect2 - Inflater: IntelInflater
+15:04:05.319 INFO  Mutect2 - GCS max retries/reopens: 20
+15:04:05.319 INFO  Mutect2 - Requester pays: disabled
+15:04:05.319 INFO  Mutect2 - Initializing engine
+15:04:05.478 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr20.vcf.gz
+15:04:05.496 INFO  IntervalArgumentCollection - Processing 63025520 bp from intervals
+15:04:05.501 INFO  Mutect2 - Done initializing engine
+15:04:05.519 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:04:05.521 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:04:05.555 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:04:05.555 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:04:05.555 INFO  IntelPairHmm - Available threads: 2
+15:04:05.555 INFO  IntelPairHmm - Requested threads: 4
+15:04:05.555 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:04:05.555 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:04:05.586 INFO  ProgressMeter -          19:44561701              0.2                148540         891240.0
+15:04:05.661 INFO  ProgressMeter - Starting traversal
+15:04:05.669 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:04:08.704 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:04:08.707 INFO  ProgressMeter -          19:59126701              0.2                197097         901152.2
+15:04:08.708 INFO  ProgressMeter - Traversal complete. Processed 197097 total regions in 0.2 minutes.
+15:04:08.864 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:04:08.864 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:04:08.864 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:04:08.865 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:04:08 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.23 minutes.
+Runtime.totalMemory()=4999610368
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 21 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr21.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr21/MN82-1059.chr21.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr21/MN82-1059.chr21.unfiltered.vcf
+15:04:13.499 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:04:13 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:04:13.618 INFO  Mutect2 - ------------------------------------------------------------
+15:04:13.618 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:04:13.618 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:04:13.619 INFO  Mutect2 - Executing as huryu@cdragon304 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:04:13.619 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:04:13.619 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:04:13 PM CDT
+15:04:13.619 INFO  Mutect2 - ------------------------------------------------------------
+15:04:13.619 INFO  Mutect2 - ------------------------------------------------------------
+15:04:13.619 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:04:13.619 INFO  Mutect2 - Picard Version: 2.25.0
+15:04:13.619 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:04:13.619 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:04:13.620 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:04:13.620 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:04:13.620 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:04:13.620 INFO  Mutect2 - Deflater: IntelDeflater
+15:04:13.620 INFO  Mutect2 - Inflater: IntelInflater
+15:04:13.620 INFO  Mutect2 - GCS max retries/reopens: 20
+15:04:13.620 INFO  Mutect2 - Requester pays: disabled
+15:04:13.620 INFO  Mutect2 - Initializing engine
+15:04:13.777 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr21.vcf.gz
+15:04:13.815 INFO  IntervalArgumentCollection - Processing 48129895 bp from intervals
+15:04:13.820 INFO  Mutect2 - Done initializing engine
+15:04:13.846 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:04:13.847 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:04:13.884 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:04:13.884 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:04:13.884 INFO  IntelPairHmm - Available threads: 2
+15:04:13.884 INFO  IntelPairHmm - Requested threads: 4
+15:04:13.884 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:04:13.884 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:04:13.985 INFO  ProgressMeter - Starting traversal
+15:04:13.985 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:04:15.670 INFO  ProgressMeter -          20:46652701              0.2                155510         933060.0
+15:04:18.734 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:04:18.734 INFO  ProgressMeter -          20:63023701              0.2                210086         964803.7
+15:04:18.735 INFO  ProgressMeter - Traversal complete. Processed 210086 total regions in 0.2 minutes.
+15:04:18.856 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:04:18.856 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:04:18.856 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:04:18.857 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:04:18 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.23 minutes.
+Runtime.totalMemory()=8065646592
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L 22 -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chr22.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr22/MN82-1059.chr22.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chr22/MN82-1059.chr22.unfiltered.vcf
+15:04:22.068 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:04:22 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:04:22.193 INFO  Mutect2 - ------------------------------------------------------------
+15:04:22.193 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:04:22.193 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:04:22.193 INFO  Mutect2 - Executing as huryu@cdragon261 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:04:22.193 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:04:22.193 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:04:22 PM CDT
+15:04:22.194 INFO  Mutect2 - ------------------------------------------------------------
+15:04:22.194 INFO  Mutect2 - ------------------------------------------------------------
+15:04:22.194 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:04:22.195 INFO  Mutect2 - Picard Version: 2.25.0
+15:04:22.195 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:04:22.195 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:04:22.195 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:04:22.195 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:04:22.195 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:04:22.195 INFO  Mutect2 - Deflater: IntelDeflater
+15:04:22.195 INFO  Mutect2 - Inflater: IntelInflater
+15:04:22.195 INFO  Mutect2 - GCS max retries/reopens: 20
+15:04:22.195 INFO  Mutect2 - Requester pays: disabled
+15:04:22.195 INFO  Mutect2 - Initializing engine
+15:04:22.397 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chr22.vcf.gz
+15:04:22.424 INFO  IntervalArgumentCollection - Processing 51304566 bp from intervals
+15:04:22.432 INFO  Mutect2 - Done initializing engine
+15:04:22.453 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:04:22.455 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:04:22.489 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:04:22.489 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:04:22.489 INFO  IntelPairHmm - Available threads: 2
+15:04:22.490 INFO  IntelPairHmm - Requested threads: 4
+15:04:22.490 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:04:22.490 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:04:22.604 INFO  ProgressMeter - Starting traversal
+15:04:22.604 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:04:23.738 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:04:23.743 INFO  ProgressMeter -          21:48128701              0.2                160433         986571.7
+15:04:23.744 INFO  ProgressMeter - Traversal complete. Processed 160433 total regions in 0.2 minutes.
+15:04:23.868 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:04:23.868 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:04:23.868 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:04:23.869 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:04:23 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.17 minutes.
+Runtime.totalMemory()=2596274176
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L X -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chrX.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chrX/MN82-1059.chrX.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chrX/MN82-1059.chrX.unfiltered.vcf
+15:04:32.605 INFO  ProgressMeter -          22:47315701              0.2                157720         946320.0
+15:04:33.394 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:04:33.395 INFO  ProgressMeter -          22:51302701              0.2                171016         950881.3
+15:04:33.395 INFO  ProgressMeter - Traversal complete. Processed 171016 total regions in 0.2 minutes.
+15:04:33.518 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:04:33.518 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:04:33.518 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:04:33.519 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:04:33 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.19 minutes.
+Runtime.totalMemory()=5108662272
+15:04:34.057 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:04:34 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:04:34.185 INFO  Mutect2 - ------------------------------------------------------------
+15:04:34.185 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:04:34.185 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:04:34.185 INFO  Mutect2 - Executing as huryu@cdragon245 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:04:34.185 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:04:34.185 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:04:34 PM CDT
+15:04:34.185 INFO  Mutect2 - ------------------------------------------------------------
+15:04:34.185 INFO  Mutect2 - ------------------------------------------------------------
+15:04:34.186 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:04:34.186 INFO  Mutect2 - Picard Version: 2.25.0
+15:04:34.186 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:04:34.186 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:04:34.186 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:04:34.186 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:04:34.186 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:04:34.186 INFO  Mutect2 - Deflater: IntelDeflater
+15:04:34.186 INFO  Mutect2 - Inflater: IntelInflater
+15:04:34.186 INFO  Mutect2 - GCS max retries/reopens: 20
+15:04:34.186 INFO  Mutect2 - Requester pays: disabled
+15:04:34.186 INFO  Mutect2 - Initializing engine
+15:04:34.343 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chrX.vcf.gz
+15:04:34.402 INFO  IntervalArgumentCollection - Processing 155270560 bp from intervals
+15:04:34.409 INFO  Mutect2 - Done initializing engine
+15:04:34.503 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:04:34.505 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:04:34.541 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:04:34.541 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:04:34.542 INFO  IntelPairHmm - Available threads: 2
+15:04:34.542 INFO  IntelPairHmm - Requested threads: 4
+15:04:34.542 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:04:34.542 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:04:34.634 INFO  ProgressMeter - Starting traversal
+15:04:34.635 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -L Y -I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1059_on_tp53.bam -pon /rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL//pon_chrY.vcf.gz --f1r2-tar-gz Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chrY/MN82-1059.chrY.f1r2.tar.gz -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1059//chrY/MN82-1059.chrY.unfiltered.vcf
+15:04:42.060 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:04:42 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:04:42.199 INFO  Mutect2 - ------------------------------------------------------------
+15:04:42.199 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:04:42.199 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:04:42.199 INFO  Mutect2 - Executing as huryu@cdragon229 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:04:42.199 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:04:42.199 INFO  Mutect2 - Start Date/Time: March 19, 2024 at 3:04:42 PM CDT
+15:04:42.199 INFO  Mutect2 - ------------------------------------------------------------
+15:04:42.199 INFO  Mutect2 - ------------------------------------------------------------
+15:04:42.200 INFO  Mutect2 - HTSJDK Version: 2.24.0
+15:04:42.200 INFO  Mutect2 - Picard Version: 2.25.0
+15:04:42.200 INFO  Mutect2 - Built for Spark Version: 2.4.5
+15:04:42.200 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:04:42.200 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:04:42.200 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:04:42.200 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:04:42.200 INFO  Mutect2 - Deflater: IntelDeflater
+15:04:42.200 INFO  Mutect2 - Inflater: IntelInflater
+15:04:42.200 INFO  Mutect2 - GCS max retries/reopens: 20
+15:04:42.200 INFO  Mutect2 - Requester pays: disabled
+15:04:42.200 INFO  Mutect2 - Initializing engine
+15:04:42.352 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/scratch/leuk-rsrch/huryu/Lab_bamFile/Mutect_Line/PON_BuiltWithoutgNomad/MutectPONCreate/PON_PANEL/pon_chrY.vcf.gz
+15:04:42.402 INFO  IntervalArgumentCollection - Processing 59373566 bp from intervals
+15:04:42.410 INFO  Mutect2 - Done initializing engine
+15:04:42.438 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+15:04:42.439 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+15:04:42.477 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+15:04:42.477 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+15:04:42.477 INFO  IntelPairHmm - Available threads: 2
+15:04:42.477 INFO  IntelPairHmm - Requested threads: 4
+15:04:42.477 WARN  IntelPairHmm - Using 2 available threads, but 4 were requested
+15:04:42.477 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+15:04:42.579 INFO  ProgressMeter - Starting traversal
+15:04:42.579 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+15:04:44.637 INFO  ProgressMeter -           X:51077701              0.2                170260        1021560.0
+15:04:52.581 INFO  ProgressMeter -           Y:52004701              0.2                173350        1040100.0
+15:04:53.933 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:04:53.934 INFO  ProgressMeter -           Y:59372701              0.2                197912        1045862.3
+15:04:53.934 INFO  ProgressMeter - Traversal complete. Processed 197912 total regions in 0.2 minutes.
+15:04:54.048 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:04:54.048 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:04:54.048 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:04:54.048 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:04:54 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.20 minutes.
+Runtime.totalMemory()=4190109696
+15:04:54.635 INFO  ProgressMeter -          X:103451701              0.3                344840        1034520.0
+15:05:04.458 INFO  Mutect2 - 0 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+0 total reads filtered
+15:05:04.458 INFO  ProgressMeter -          X:155267701              0.5                517569        1041281.6
+15:05:04.458 INFO  ProgressMeter - Traversal complete. Processed 517569 total regions in 0.5 minutes.
+15:05:04.565 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.0
+15:05:04.565 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 0.0
+15:05:04.565 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 0.00 sec
+15:05:04.565 INFO  Mutect2 - Shutting down engine
+[March 19, 2024 at 3:05:04 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 0.51 minutes.
+Runtime.totalMemory()=4538236928

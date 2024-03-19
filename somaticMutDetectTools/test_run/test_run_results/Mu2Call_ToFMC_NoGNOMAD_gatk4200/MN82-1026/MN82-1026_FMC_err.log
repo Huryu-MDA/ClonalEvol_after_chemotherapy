@@ -1,0 +1,48 @@
+Using GATK jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx40G -jar /rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar FilterMutectCalls -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta -V Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1026//MN82-1026.merged.unfiltered.vcf --ob-priors Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1026//MN82-1026.read-orientation-model.tar.gz --stats Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1026//MN82-1026.merged.stats -O Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1026//MN82-1026.merged.filtered.vcf
+15:02:09.734 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rsrch3/home/leuk-rsrch/huryu/ToolBioInfo/gatk-4.2.0.0/gatk-package-4.2.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Mar 19, 2024 3:02:09 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+15:02:09.859 INFO  FilterMutectCalls - ------------------------------------------------------------
+15:02:09.859 INFO  FilterMutectCalls - The Genome Analysis Toolkit (GATK) v4.2.0.0
+15:02:09.859 INFO  FilterMutectCalls - For support and documentation go to https://software.broadinstitute.org/gatk/
+15:02:09.859 INFO  FilterMutectCalls - Executing as huryu@cdragon390 on Linux v3.10.0-1160.15.2.el7.x86_64 amd64
+15:02:09.859 INFO  FilterMutectCalls - Java runtime: OpenJDK 64-Bit Server VM v11.0.5+10
+15:02:09.859 INFO  FilterMutectCalls - Start Date/Time: March 19, 2024 at 3:02:09 PM CDT
+15:02:09.859 INFO  FilterMutectCalls - ------------------------------------------------------------
+15:02:09.859 INFO  FilterMutectCalls - ------------------------------------------------------------
+15:02:09.860 INFO  FilterMutectCalls - HTSJDK Version: 2.24.0
+15:02:09.860 INFO  FilterMutectCalls - Picard Version: 2.25.0
+15:02:09.860 INFO  FilterMutectCalls - Built for Spark Version: 2.4.5
+15:02:09.860 INFO  FilterMutectCalls - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+15:02:09.860 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+15:02:09.860 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+15:02:09.860 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+15:02:09.860 INFO  FilterMutectCalls - Deflater: IntelDeflater
+15:02:09.860 INFO  FilterMutectCalls - Inflater: IntelInflater
+15:02:09.860 INFO  FilterMutectCalls - GCS max retries/reopens: 20
+15:02:09.860 INFO  FilterMutectCalls - Requester pays: disabled
+15:02:09.860 INFO  FilterMutectCalls - Initializing engine
+15:02:10.006 INFO  FeatureManager - Using codec VCFCodec to read file file:///rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_run/Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1026/MN82-1026.merged.unfiltered.vcf
+15:02:10.038 INFO  FilterMutectCalls - Done initializing engine
+15:02:10.126 INFO  IOUtils - Extracting data from archive: file:///rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_run/Mu2Call_ToFMC_NoGNOMAD_gatk4200/MN82-1026/MN82-1026.read-orientation-model.tar.gz
+15:02:10.130 INFO  IOUtils - Extracting file: ./MN82-1026-754055-2008-36.orientation_priors
+15:02:10.171 INFO  ProgressMeter - Starting traversal
+15:02:10.171 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+15:02:10.172 INFO  FilterMutectCalls - Starting pass 0 through the variants
+15:02:10.304 INFO  FilterMutectCalls - Finished pass 0 through the variants
+15:02:10.324 INFO  FilterMutectCalls - Starting pass 1 through the variants
+15:02:10.338 INFO  FilterMutectCalls - Finished pass 1 through the variants
+15:02:10.342 INFO  FilterMutectCalls - Starting pass 2 through the variants
+15:02:10.359 INFO  FilterMutectCalls - Finished pass 2 through the variants
+15:02:10.359 INFO  FilterMutectCalls - Starting pass 3 through the variants
+15:02:10.388 INFO  FilterMutectCalls - Finished pass 3 through the variants
+15:02:10.394 INFO  FilterMutectCalls - No variants filtered by: AllowAllVariantsVariantFilter
+15:02:10.394 INFO  FilterMutectCalls - 0 read(s) filtered by: AllowAllReadsReadFilter 
+
+15:02:10.394 INFO  ProgressMeter -             unmapped              0.0                    24           6457.4
+15:02:10.394 INFO  ProgressMeter - Traversal complete. Processed 24 total variants in 0.0 minutes.
+15:02:10.403 INFO  FilterMutectCalls - Shutting down engine
+[March 19, 2024 at 3:02:10 PM CDT] org.broadinstitute.hellbender.tools.walkers.mutect.filtering.FilterMutectCalls done. Elapsed time: 0.01 minutes.
+Runtime.totalMemory()=2583691264

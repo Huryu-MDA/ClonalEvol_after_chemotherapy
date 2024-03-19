@@ -1,0 +1,10 @@
+#!/bin/bash
+
+module load openjdk/11.0.5-10
+
+gatk4200 --java-options "-Xmx24G" \
+Mutect2 -R /rsrch3/scratch/reflib/iacs/reference/human/hg19/fastas/Homo_sapiens_assembly19.fasta \
+-L 6 \
+--alleles UnfilteredVCF_on_1stMu2Call/Chr6_merged.vcf \
+-I /rsrch3/home/leuk-rsrch/huryu/Project_DataProcessing/create_dataset_ToUploadToGitHub_BasedOn_337920_2010/test_data_on_tp53/bamfiles_on_TP53_region/MN82-1083_on_tp53.bam \
+-O Mu2Call_ForceCallmVCF/MN82-1083/Chr6//MN82-1083.Chr6.unfiltered.vcf
