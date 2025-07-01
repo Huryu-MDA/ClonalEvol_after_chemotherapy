@@ -1,39 +1,33 @@
-# Clonal Evolution of Hematopoietic Stem Cells  After Autologous Stem Cell Transplantation
+# Clonal Evolution of Hematopoietic Stem Cells After Autologous Stem Cell Transplantation
 
-Welcome to the official repository accompanying our research article,\
-**"Clonal Evolution of Hematopoietic Stem Cells  After Autologous Stem Cell Transplantation."**
+This repository contains the full pipeline and scripts used in the analysis presented in:
 
-This repository contains code, scripts, and test data supporting our somatic mutation analysis, variant filtering, and phylogenetic reconstruction using patient-derived hematopoietic stem cell samples.
+**Uryu, H. et al.**  
+*Clonal evolution of hematopoietic stem cells after autologous stem cell transplantation.*  
+*Nature Genetics* (2025) [https://doi.org/10.1038/s41588-025-02235-w](https://doi.org/10.1038/s41588-025-02235-w)
 
 ---
 
-## Repository Structure
+## Repository Overview
+
+This project is divided into modular, checkpointed components that align with the somatic mutation detection and phylogenetic analysis process:
 
 ```
-├── dir_list/                                 # Utility or directory listings
-├── phylo_piechart_for_shared_variant_fraction/
-│   ├── code/                                 # Scripts to express the shared variant frequencies in each node of phylogenetic trees
-│   ├── data/                                 # Input data
-│   └── test/                                 # Example/test data
-├── phylo_plot_modify/
-│   ├── code/                                 # Custom plot scripts for phylogenies; tree branches can be converted to mutational signature compositions
-│   ├── data/                                 # Input data
-│   ├── README.md                             # Module-specific documentation
-│   └── test/                                 # Example/test outputs
-├── somaticMutDetectTools/
-│   ├── code/                                 # Core somatic mutation pipeline (stepwise execution)
-│   │   ├── Mu2_1stCall/                      # Initial Mutect2 per-chromosome calls
-│   │   ├── Mu2_2ndCall/                      # Merge and filter VCFs; orientation model
-│   │   └── VCF_FilterTag/                    # Custom postprocessing and tagging
-│   ├── README.md                             # In-depth guide for using this module
-│   ├── test_data/                            # BAM test inputs and reference resources
-│   │   ├── PON_PANEL_on_hg19/                # Panel of Normals (chr-split VCFs)
-│   │   └── test_data_on_tp53/                # BAM/metadata for TP53 test cases
-│   └── test_run/                             # Results from running on test data
-│       ├── README.md                         # Explains test procedure and expected outputs
-│       ├── test_run_backup/                  # Archived or previous runs
-│       └── test_run_results/                 # Output of test pipeline (VCFs, logs, etc.)
-└── README.md                                 # This file
+somaticMutDetectTools/
+├── code/
+│   ├── LSF_utils/         # LSF job wrappers and helper utilities
+│   ├── Mu2_1stCall/       # Initial GATK Mutect2 per-chromosome calling
+│   ├── Mu2_2ndCall/       # Forced calling and tag matrix construction
+│   └── VCF_FilterTag/     # Final filtering and annotation of VCFs
+├── test_data/             # Panel of Normals and TP53 BAMs for testing
+├── test_run/              # Output from running test data
+└── README.md              # This file
+```
+
+Additional analysis components:
+```
+phylo_plot_modify/                           # Convert tree branches to mutational signature profiles
+phylo_piechart_for_shared_variant_fraction/  # Shared variant pie chart visualization
 ```
 
 ---
@@ -53,8 +47,8 @@ This project relies primarily on shell scripting and the GATK toolkit for somati
 
 ### Required Reference Files
 
-| File                            | Description                                                  |
-| ------------------------------- | ------------------------------------------------------------ |
+| File                          | Description                                                  |
+|-------------------------------|--------------------------------------------------------------|
 | `Homo_sapiens_assembly19.fasta` | Reference genome (hg19)                                      |
 | `pon_chr*.vcf.gz`               | Panel of Normals for each chromosome                         |
 | `bamlist.txt`                   | File containing full paths to BAM files with associated tags |
@@ -62,58 +56,71 @@ This project relies primarily on shell scripting and the GATK toolkit for somati
 
 ---
 
-## Running the Somatic Mutation Detection Pipeline
+## How to Use
 
-Navigate to `somaticMutDetectTools/code/` and execute the steps in order:
+Each major step is designed to be run **independently and modularly**.
 
-1. **Mu2\_1stCall**: Run initial per-chromosome somatic variant calls using GATK Mutect2
-2. **Mu2\_2ndCall**: Merge outputs, learn read orientation model, and apply filtering
-3. **VCF\_FilterTag**: Postprocess and annotate filtered VCFs as needed
-
-Each subfolder contains scripts that can be executed independently or integrated in a workflow.
-
-Example:
+### 🧪 1. `Mu2_1stCall/`
+Run GATK Mutect2 for initial per-chromosome variant calling.
 
 ```bash
-bash Mu2_1stCall/run_Mutect2_by_chr.sh bamlist.txt SAMPLE_TAG
-bash Mu2_2ndCall/run_merge_filter.sh SAMPLE_TAG
-bash VCF_FilterTag/apply_custom_filter.sh SAMPLE_TAG
+bash Mu2_1stCall/Mu2Call1st_LROM_GPS_CC_Filter_without_gNomad.sh BamList SampleTag
 ```
 
-Final results are stored under a subdirectory like:
+### 🔁 2. `Mu2_2ndCall/`
+Force call known variant loci and create a tag matrix for filtering.
 
+```bash
+bash Mu2_2ndCall/core_scripts/VCF_merge_from_1stMu2call.sh BamList TagList
+bash Mu2_2ndCall/core_scripts/2ndMu2Call_on_MergedVCF.sh BamList TagList hg19
+bash Mu2_2ndCall/core_scripts/VCF_concat_merge_to_FilMTX.sh TagList hg19 F
 ```
-Mu2Call_ToFMC_NoGNOMAD_gatk4200/SAMPLE_TAG/
+
+### 🧬 3. `VCF_FilterTag/`
+Final filtering and annotation using the matrix from 2nd call.
+
+```bash
+bash VCF_FilterTag/FilTaggingToVCF.sh TagList F
 ```
 
 ---
 
-## Additional Tools and Analysis
+## Job Management (LSF)
 
-Other subdirectories contain code for:
+This pipeline depends on the LSF job scheduler and includes helper tools in:
 
-- **Phylogenetic plotting** — Custom scripts for converting phylogenetic tree branches into mutational signature compositions
-- **Variant sharing visualization with pie charts** — Scripts to express the shared variant frequencies in each node of phylogenetic trees
-- **Post-processing and figure generation for publication**
+```
+somaticMutDetectTools/code/LSF_utils/
+```
 
-Please refer to each subfolder's `README.md` for module-specific documentation and test data.
+These include:
+- `BsubS`, `BsubM`, `BsubL`: Job wrappers for different types
+- `WaitSignalMaker.sh`: Job dependency tracker
+- `File_pickByTag*.sh`: Extract paths by sample tag
+
+---
+
+## Reproducibility Strategy
+
+Due to common instability in HPC environments:
+- Each stage is checkpointed
+- Logs (`*.log`, `*.err`) are preserved
+- Only rerun failed steps as needed
+
+See: `Recommended_Usage_Recovery.md` for more details.
 
 ---
 
 ## Citation
 
-If you use this code or data in your research, please cite:
-
-> Uryu, H. et al. *Clonal evolution of hematopoietic stem cells after autologous stem cell transplantation*. *Nature Genetics*. [https://doi.org/10.1038/s41588-025-02235-w](https://doi.org/10.1038/s41588-025-02235-w) (2025).
+> Uryu, H. et al. *Clonal evolution of hematopoietic stem cells after autologous stem cell transplantation.*  
+> *Nature Genetics* (2025). [https://doi.org/10.1038/s41588-025-02235-w](https://doi.org/10.1038/s41588-025-02235-w)
 
 ---
 
 ## Contact
 
-For any questions, bug reports, or collaboration inquiries, please contact:
+**Hidetaka Uryu**  
+📧 huryu@mdanderson.org
 
-**Hidetaka Uryu**\
-📧 [huryu@mdanderson.org](mailto\:huryu@mdanderson.org)
-
-We welcome contributions and feedback to improve this research resource.
-
+Please feel free to reach out for questions or collaborations.
