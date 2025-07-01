@@ -32,6 +32,30 @@ phylo_piechart_for_shared_variant_fraction/  # Shared variant pie chart visualiz
 
 ---
 
+## Requirements and Setup
+
+This project relies primarily on shell scripting and the GATK toolkit for somatic mutation detection.
+
+### Software Dependencies
+
+- **Bash** (tested on Linux environment)
+- **Java** 11 (e.g., `openjdk/11.0.5`)
+- **GATK** 4.2.0.0
+- **LSF Job Scheduler** (uses `bsub` for job submission)
+
+> Adapt `bsub` and `module load` commands if you're not using an LSF-based HPC system.
+
+### Required Reference Files
+
+| File                          | Description                                                  |
+|-------------------------------|--------------------------------------------------------------|
+| `Homo_sapiens_assembly19.fasta` | Reference genome (hg19)                                      |
+| `pon_chr*.vcf.gz`               | Panel of Normals for each chromosome                         |
+| `bamlist.txt`                   | File containing full paths to BAM files with associated tags |
+| *(optional)* `gnomAD.vcf`       | For contamination filtering (currently commented out)        |
+
+---
+
 ## How to Use
 
 Each major step is designed to be run **independently and modularly**.
