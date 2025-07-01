@@ -1,0 +1,58 @@
+#!/bin/bash
+
+
+n_core=12
+MemorySize=80
+Xwindow=""
+while getopts n:M:x OPT
+do
+  case $OPT in
+    "n" ) n_core="$OPTARG" ;;
+    #"n" ) FLG_n="TRUE" ; n_core="$OPTARG" ;;
+    "M" ) MemorySize="$OPTARG" ;;
+    #"M" ) FLG_M="TRUE" ; MemorySize="$OPTARG" ;;
+    "x" ) Xwindow="-XF" ;;
+  esac
+done
+
+shift $(expr $OPTIND - 1)
+
+#if [[ ${FLG_n} != TRUE ]]
+#then
+#  n_core=12
+#fi
+#
+#if [[ ${FLG_M} != TRUE ]]
+#then
+#  MemorySize=80
+#fi
+
+#echo ${FLG_n}
+#echo ${FLG_M}
+#echo ${n_core}
+#echo ${MemorySize}
+#echo $1
+#echo $2
+#exit
+
+CMD=$1
+LogName=$2
+WaitSignal=$3
+
+OutLog="${LogName}_out.log"
+ErrLog="${LogName}_err.log"
+
+if [[ $2 = "" ]]
+then
+  OutLog="OutLog"
+  ErrLog="ErrLog"
+fi
+
+#echo ${OutLog}
+#echo ${ErrLog}
+
+#exit
+
+#bsub -W 4:00 -q short -n 3 -M 30G -e ${LogName}_$(timeID)_err.log -o ${LogName}_$(timeID)_out.log "${CMD}"
+bsub -W 3:00 -q short -n ${n_core} -M ${MemorySize}G ${Xwindow} -R rusage[mem=${MemorySize}] -e ${ErrLog} -o ${OutLog} -w "${WaitSignal}" "${CMD}"
+#echo "bsub -W 24:00 -q medium -n ${n_core} -M ${MemorySize}G ${Xwindow} -R rusage[mem=${MemorySize}] -e ${ErrLog} -o ${OutLog} -w ""${WaitSignal}" "${CMD}"
